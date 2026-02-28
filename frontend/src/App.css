@@ -1,0 +1,355 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Button Styles */
+.btn-up-gov {
+  background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.btn-up-gov:hover {
+  background: linear-gradient(135deg, #1E3A8A 0%, #1e2b5e 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+.btn-up-gov:active {
+  transform: translateY(0);
+}
+
+.btn-up-gov-secondary {
+  background: white;
+  color: #1E40AF;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #1E40AF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.btn-up-gov-secondary:hover {
+  background: #DBEAFE;
+  border-color: #1E3A8A;
+  color: #1E3A8A;
+}
+
+.btn-up-gov-danger {
+  background: #DC2626;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-up-gov-danger:hover {
+  background: #B91C1C;
+  transform: translateY(-1px);
+}
+
+/* Card Styles */
+.card-up-gov {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E5E7EB;
+  transition: box-shadow 0.3s ease;
+}
+
+.card-up-gov:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-pending {
+  background-color: #FEF3C7;
+  color: #92400E;
+}
+
+.status-in-progress {
+  background-color: #DBEAFE;
+  color: #1E40AF;
+}
+
+.status-resolved {
+  background-color: #D1FAE5;
+  color: #065F46;
+}
+
+.status-rejected {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+/* Priority Badges */
+.priority-low {
+  background-color: #F3F4F6;
+  color: #374151;
+}
+
+.priority-medium {
+  background-color: #FEF3C7;
+  color: #92400E;
+}
+
+.priority-high {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+.priority-critical {
+  background-color: #FECACA;
+  color: #7F1D1D;
+  font-weight: bold;
+}
+
+/* Table Styles */
+.up-gov-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.up-gov-table thead {
+  background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+}
+
+.up-gov-table th {
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border: none;
+}
+
+.up-gov-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.up-gov-table tbody tr:hover {
+  background-color: #F8FAFC;
+}
+
+.up-gov-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.up-gov-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Input Styles */
+.input-up-gov {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.input-up-gov:focus {
+  outline: none;
+  border-color: #1E40AF;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.input-up-gov-error {
+  border-color: #DC2626;
+  background-color: #FEF2F2;
+}
+
+.input-up-gov-error:focus {
+  border-color: #DC2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Alert Styles */
+.alert-up-gov {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.alert-info {
+  background-color: #DBEAFE;
+  border-left: 4px solid #1E40AF;
+  color: #1E3A8A;
+}
+
+.alert-success {
+  background-color: #D1FAE5;
+  border-left: 4px solid #10B981;
+  color: #065F46;
+}
+
+.alert-warning {
+  background-color: #FEF3C7;
+  border-left: 4px solid #F59E0B;
+  color: #92400E;
+}
+
+.alert-danger {
+  background-color: #FEE2E2;
+  border-left: 4px solid #DC2626;
+  color: #991B1B;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-10px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Loading Spinner */
+.spinner-up-gov {
+  border: 3px solid #DBEAFE;
+  border-top: 3px solid #1E40AF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .btn-up-gov,
+  .btn-up-gov-secondary {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .card-up-gov {
+    border-radius: 0.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .card-up-gov {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}
